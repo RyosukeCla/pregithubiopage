@@ -1,0 +1,16 @@
+.hoge1 {
+	color: #0000ff;
+}
+.hoge5 {
+	float: left;
+	width: 470px;
+}
+.red {
+	float: right;
+	width: 250px;
+	height: 100px;
+	background: #FC9;
+	display: table-cell;
+	vertical-align: middle;
+	color: #FFF;
+}
