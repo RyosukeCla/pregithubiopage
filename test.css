@@ -1,3 +1,20 @@
+body {
+	background: rgb(210,210,220);
+}
+
+header {
+	background: rgb(230,230,235);
+}
+
+footer {
+    margin: 0;
+	padding: 0;
+	background: rgb(230,230,235);
+}
+html,body{
+	margin:0;padding:0;
+}
+
 .header_bar {
 	position: fixed;
 	margin: 0px;
@@ -6,6 +23,7 @@
 	width: 100%;
 	height: 70px;
 	background: rgb(230,230,235);
+	box-shadow:0px 1px 10px rgba(10,10,10,.2);
     transition: .3s;
 }
 
@@ -90,5 +108,48 @@
 	color: rgb(240,170,50);
 };
 
+
+#body-wrap {
+	}
+
+#body-wrap div {
+	float: left;
+}
+
+#main-content {
+	margin-top: 70px;
+	word-break:break-all;
+	width: 48%;
+	height: 1000px;
+	margin-right: 1%;
+	margin-left: 14%;
+	padding: 1%;
+    text-align: left;
+	background: rgb(230,230,240);
+	box-shadow:1px 0px 20px rgba(150, 150, 150, 1);
+}
+
+#side-content {
+	margin-top: 70px;
+	word-break:break-all;
+	width: 20%;
+	height: 400px;
+	margin-left: 1%;
+	padding: 1%;
+    background: rgb(230,230,240);
+    box-shadow:1px 0px 20px rgba(150, 150, 150, 1);
+}
+
+#clear {
+	clear: left;
+	position: relative;
+	left: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+    width: 100%;
+    height: 140px;
+    box-shadow:0px -1px 10px rgba(10,10,10,.2);
+}
 
 

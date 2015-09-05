@@ -1,12 +1,15 @@
 body{
 text-align:center;
+background: rgb(100,100,100);
 }
 
 #wrap{
 width:500px;
+height: 900px;
 margin:0 auto;
 text-align:left;
 border:solid 1px #333;
+background: rgb(15,150,150);
 }
 
 #head {
