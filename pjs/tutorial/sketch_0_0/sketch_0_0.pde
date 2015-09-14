@@ -1,6 +1,6 @@
 Object[] obj = new Object[3];
 void setup() {
-  size(700, 150);
+  size(600, 150);
   textAlign(CENTER, CENTER);
   textSize(50);
   noStroke();
@@ -33,7 +33,7 @@ class Object {
     co = color(random(20, 150), random(50, 160), random(80, 230));
     num = (int)random(3, 14);
     theta = random(-360,360);
-    x = -100.0 -n*900.0/3;
+    x = -100.0 -n*800.0/3;
     y = height/2.0;
     size = random(40, 80);
   }
