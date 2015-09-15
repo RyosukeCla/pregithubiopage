@@ -1,7 +1,7 @@
 World world;
 
 void setup() {
-  size(580, 600);
+  size(580, 500);
   //frame.setResizable(true);
   frameRate(50);
   world = new World(5);
@@ -168,13 +168,13 @@ class Organism {
 
     // normal movement
     else {
-      x += 0.1;
-      y += 0.1;
+      x += 0.05;
+      y += 0.05;
 
       float xa, ya;
       noiseDetail(12, 0.5);
-      xa = map(noise(x), 0, 1, -0.3, 0.30);
-      ya = map(noise(y), 0, 1, -0.3, 0.30);
+      xa = map(noise(x), 0, 1, -0.4, 0.40);
+      ya = map(noise(y), 0, 1, -0.4, 0.40);
       PVector motion = new PVector(xa, ya);
       applyForce(motion);
     }
