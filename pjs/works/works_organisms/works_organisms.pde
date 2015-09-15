@@ -3,7 +3,7 @@ World world;
 void setup() {
   size(580, 500);
   //frame.setResizable(true);
-  frameRate(50);
+  frameRate(60);
   world = new World(5);
 }
 
@@ -173,8 +173,8 @@ class Organism {
 
       float xa, ya;
       noiseDetail(12, 0.5);
-      xa = map(noise(x), 0, 1, -0.4, 0.40);
-      ya = map(noise(y), 0, 1, -0.4, 0.40);
+      xa = map(noise(x), 0, 1, -0.5, 0.50);
+      ya = map(noise(y), 0, 1, -0.5, 0.50);
       PVector motion = new PVector(xa, ya);
       applyForce(motion);
     }
