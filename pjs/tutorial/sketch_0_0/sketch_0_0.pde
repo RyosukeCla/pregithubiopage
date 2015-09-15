@@ -29,6 +29,7 @@ class Object {
   int num;
   float theta;
   float size;
+  float tog;
   Object(int n) {
     co = color(random(20, 150), random(50, 160), random(80, 230));
     num = (int)random(3, 14);
@@ -36,12 +37,13 @@ class Object {
     x = -100.0 -n*800.0/3;
     y = height/2.0;
     size = random(40, 80);
+    tog = random(1,5);
   }
 
   void update() {
     x+=3;
-    theta+=2;
-    y += 1.9*sin(radians(theta));
+    theta+=tog;
+    y = height/2.0 + size*sin(radians(theta));
   }
 
   void display() {
@@ -54,7 +56,8 @@ class Object {
       vertex(size*cos(radians((float)360.0*i/num)), size*sin(radians((float)360.0*i/num)));
     }
     endShape();
+    fill(240,240,255,100);
+    ellipse(0,0,size/4.0,size/4.0);
     popMatrix();
   }
 }
-
