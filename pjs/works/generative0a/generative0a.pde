@@ -1,11 +1,12 @@
 PGraphics pg;
 void setup() {
-  size(600, 600,P2D);
+  size(600, 600);
   pg = createGraphics(600,600,P2D);
   frameRate(30);
   a = 2;
   b = 1;
   c = 1;
+  background(0,0,30);
 }
 float a,b,c;
 
