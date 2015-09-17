@@ -1,8 +1,8 @@
 Bar[] bar = new Bar[7];
 PGraphics pg;
 void setup() {
-  size(600, 600, P3D);
-  pg = createGraphics(600,600,P3D);
+  size(600, 600, P2D);
+  pg = createGraphics(600,600,P2D);
   frameRate(30);
   a = 2;
   for (int i = 0; i < bar.length; i++) {
@@ -30,7 +30,7 @@ void draw() {
   pg.beginDraw();
   pg.background(0, 0, 30);
   pg.noStroke();
-  pg.blendMode(ADD);
+  //pg.blendMode(ADD);
   pg.pushMatrix();
   pg.translate(width/2, height/2);
   for (int i = 0; i < bar[6].getValue(); i+=1) {
