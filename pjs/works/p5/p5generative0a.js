@@ -1,7 +1,13 @@
 var a, b, c;
 function setup() {
+	if (displayWidth < 900) {
+		createCanvas(900,900);
 
-createCanvas(displayWidth,displayHeight);
+	} else {
+		createCanvas(displayWidth,displayHeight);
+
+	}
+
 frameRate(60);
 a = 2;
 b = 1;
