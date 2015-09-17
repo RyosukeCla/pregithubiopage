@@ -2,7 +2,7 @@ World world;
 PGraphics pg;
 void setup() {
   size(580, 500);
-  pg = createGraphics(10,10,P3D);
+  pg = createGraphics(580,500,P3D);
   //frame.setResizable(true);
   frameRate(60);
   world = new World(5);
@@ -241,19 +241,22 @@ class Organism {
 
   void display() {
     float theta = velocity.heading() + PI/2;
-    noStroke();
-    fill(organismColor);
-    pushMatrix();
-    translate(location.x, location.y);
-    rotate(theta);
-    beginShape();
-    vertex(0, -r*1);
-    bezierVertex(r*1.1, r*(-0.9), r*1.1, r*0.1, r*1, r*0.5);
-    bezierVertex(r*0.8, r*1.3, 0, r*1.4, 0 + r*sin(radians(rad)), r*2.0 + r*abs(cos(radians(rad))));
-    bezierVertex(0, r*1.4, r*(-0.8), r*1.3, r*(-1), r*0.5);
-    bezierVertex(r*(-1.1), r*0.1, r*(-1.1), r*(-0.9), 0, -r*1);
-    endShape();
-    popMatrix();
+    pg.beginDraw();
+    pg.noStroke();
+    pg.fill(organismColor);
+    pg.pushMatrix();
+    pg.translate(location.x, location.y);
+    pg.rotate(theta);
+    pg.beginShape();
+    pg.vertex(0, -r*1);
+    pg.bezierVertex(r*1.1, r*(-0.9), r*1.1, r*0.1, r*1, r*0.5);
+    pg.bezierVertex(r*0.8, r*1.3, 0, r*1.4, 0 + r*sin(radians(rad)), r*2.0 + r*abs(cos(radians(rad))));
+    pg.bezierVertex(0, r*1.4, r*(-0.8), r*1.3, r*(-1), r*0.5);
+    pg.bezierVertex(r*(-1.1), r*0.1, r*(-1.1), r*(-0.9), 0, -r*1);
+    pg.endShape();
+    pg.popMatrix();
+    pg.endDraw();
+    image(pg, 0,0);
     
   }
   
