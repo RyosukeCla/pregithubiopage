@@ -6,11 +6,11 @@ void setup() {
   a = 2;
   b = 1;
   c = 1;
-  background(0,0,30);
 }
 float a,b,c;
 
 void draw() {
+  background(0);
   pg.beginDraw();
   pg.background(0, 0, 30);
   pg.noStroke();
