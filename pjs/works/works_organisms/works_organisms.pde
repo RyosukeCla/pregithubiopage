@@ -256,6 +256,7 @@ class Organism {
     pg.bezierVertex(r*(-1.1), r*0.1, r*(-1.1), r*(-0.9), 0, -r*1);
     pg.endShape();
     pg.popMatrix();
+    pg.text("test", 50, 0);
     pg.endDraw();
     image(pg, 0,0);
     
