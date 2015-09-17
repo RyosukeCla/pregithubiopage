@@ -10,6 +10,8 @@ void setup() {
 void draw() { 
   background(255);
   world.update();
+  fill(0);
+  text("p3d",10,10);
 
 }
 
