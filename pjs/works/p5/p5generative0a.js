@@ -2,12 +2,10 @@ var a, b, c;
 function setup() {
 	if (displayWidth < 900) {
 		createCanvas(900,900);
-
+        
 	} else {
 		createCanvas(displayWidth,displayHeight);
-
 	}
-
 frameRate(60);
 a = 2;
 b = 1;
@@ -29,6 +27,17 @@ for (var i = 0; i < 3600; i+=1) {
 a+=0.01;
 b = 5.0 * mouseX/width;
 c = 5.0 * mouseY/height;
+resetMatrix();
+fill(70,200,140,50);
+text("FullScreen", 10, 20);
+rect(0,0,100,30);
 if (mouseIsPressed) 
 	a = 2;
+}
+
+function mousePressed() {
+  if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 30) {
+    var fs = fullScreen();
+    fullScreen(!fs);
+  }
 }
