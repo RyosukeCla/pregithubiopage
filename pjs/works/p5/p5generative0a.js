@@ -1,7 +1,7 @@
 var a, b, c;
 function setup() {
 
-createCanvas(windowWidth,windowHeight);
+createCanvas(displayWidth,displayHeight);
 frameRate(60);
 a = 2;
 b = 1;
