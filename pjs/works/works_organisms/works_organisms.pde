@@ -1,7 +1,8 @@
 World world;
-
+PGraphics pg;
 void setup() {
-  size(580, 500, P3D);
+  size(580, 500);
+  pg = createGraphics(10,10,P3D);
   //frame.setResizable(true);
   frameRate(60);
   world = new World(5);
@@ -10,9 +11,6 @@ void setup() {
 void draw() { 
   background(255);
   world.update();
-  fill(0);
-  text("p3d",10,10);
-
 }
 
 void mouseReleased() {
