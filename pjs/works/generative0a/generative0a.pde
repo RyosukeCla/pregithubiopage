@@ -1,6 +1,6 @@
 PGraphics pg;
 void setup() {
-  size(600, 600);
+  size(600, 600, P2D);
   pg = createGraphics(600,600,P2D);
   frameRate(30);
   a = 2;
@@ -14,7 +14,7 @@ void draw() {
   pg.beginDraw();
   pg.background(0, 0, 30);
   pg.noStroke();
-  pg.blendMode(ADD);
+  //pg.blendMode(ADD);
   pg.pushMatrix();
   pg.translate(width/2, height/2);
   for (int i = 0; i < 3600; i+=1) {
