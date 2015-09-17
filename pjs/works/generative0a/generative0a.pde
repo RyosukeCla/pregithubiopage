@@ -1,5 +1,5 @@
 void setup() {
-  size(600, 600, P3D);
+  size(600, 600, P2D);
   blendMode(ADD);
   frameRate(30);
   a = 2;
