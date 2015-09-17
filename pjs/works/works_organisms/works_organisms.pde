@@ -1,7 +1,7 @@
 World world;
 
 void setup() {
-  size(580, 500);
+  size(580, 500, P3D);
   //frame.setResizable(true);
   frameRate(60);
   world = new World(5);
