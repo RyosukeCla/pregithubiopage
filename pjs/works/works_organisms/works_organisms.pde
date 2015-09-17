@@ -11,6 +11,7 @@ void setup() {
 void draw() { 
   background(255);
   world.update();
+  rect(50,50,50,50);
 }
 
 void mouseReleased() {
