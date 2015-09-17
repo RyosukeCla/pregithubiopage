@@ -1,7 +1,8 @@
 Bar[] bar = new Bar[7];
+PGraphics pg;
 void setup() {
-  size(600, 600, P2D);
-  blendMode(ADD);
+  size(600, 600, P3D);
+  pg = createGraphics(600,600,P3D);
   frameRate(30);
   a = 2;
   for (int i = 0; i < bar.length; i++) {
@@ -21,23 +22,26 @@ void setup() {
   bar[3].setInitialValue(6);
   bar[4].setInitialValue(15);
   bar[5].setInitialValue(15);
-  bar[6].setInitialValue(30);
+  bar[6].setInitialValue(45);
 }
 float a;
 
 void draw() {
-  background(0, 0, 30);
-  noStroke();
-  blendMode(ADD);
-  pushMatrix();
-  translate(width/2, height/2);
-  for (int i = 0; i < 7200; i+=1) {
+  pg.beginDraw();
+  pg.background(0, 0, 30);
+  pg.noStroke();
+  pg.blendMode(ADD);
+  pg.pushMatrix();
+  pg.translate(width/2, height/2);
+  for (int i = 0; i < bar[6].getValue(); i+=1) {
     float xpos = (bar[0].getValue() + radians(i*bar[2].getValue()) * sin(radians(i*bar[4].getValue()))) * cos(radians(i));
     float ypos = (bar[1].getValue() + radians(i*bar[3].getValue()) * sin(radians(i*bar[5].getValue()))) * sin(radians(i));
-    fill(70, 200, 140, 100);
-    ellipse(xpos, ypos, 3, 3);
+    pg.fill(70, 200, 140, 100);
+    pg.ellipse(xpos, ypos, 3, 3);
   }
-  popMatrix();
+  pg.popMatrix();
+  pg.endDraw();
+  image(pg,0,0);
   //a = 10.0 * mouseX/width;
   for (int i = 0; i < bar.length; i++) {
     bar[i].update();
