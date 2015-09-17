@@ -1,7 +1,7 @@
 PGraphics pg;
 void setup() {
-  size(600, 600);
-  pg = createGraphics(600,600,P3D);
+  size(600, 600,P2D);
+  pg = createGraphics(600,600,P2D);
   frameRate(30);
   a = 2;
   b = 1;
